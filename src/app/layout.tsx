@@ -13,6 +13,7 @@ const manrope = Manrope({
 const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-serif",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
