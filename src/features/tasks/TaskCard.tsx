@@ -60,26 +60,26 @@ export default function TaskCard({
             ) : null}
           </div>
 
-          <div className="mt-5 grid gap-3 text-sm text-[var(--color-muted)] sm:grid-cols-3">
-            <div className="zen-panel-soft p-3">
-              <p className="text-xs uppercase tracking-[0.18em]">Assignee</p>
-              <p className="mt-2 text-sm font-semibold text-[var(--color-text)]">
+          <div className="mt-5 flex flex-wrap gap-3 text-sm text-[var(--color-muted)]">
+            <div className="zen-panel-soft flex-1 min-w-[130px] px-4 py-3">
+              <p className="text-xs uppercase tracking-wider">Assignee</p>
+              <p className="mt-1 text-sm font-semibold text-[var(--color-text)] truncate">
                 {task.assignedTo?.name || "Unassigned"}
               </p>
             </div>
-            <div className="zen-panel-soft p-3">
-              <p className="text-xs uppercase tracking-[0.18em]">Due date</p>
+            <div className="zen-panel-soft flex-1 min-w-[130px] px-4 py-3">
+              <p className="text-xs uppercase tracking-wider">Due date</p>
               <p
-                className={`mt-2 text-sm font-semibold ${
+                className={`mt-1 text-sm font-semibold truncate ${
                   isOverdue ? "text-[var(--color-danger)]" : "text-[var(--color-text)]"
                 }`}
               >
                 {dueDate ? dueDate.toLocaleDateString() : "Not set"}
               </p>
             </div>
-            <div className="zen-panel-soft p-3">
-              <p className="text-xs uppercase tracking-[0.18em]">Created by</p>
-              <p className="mt-2 text-sm font-semibold text-[var(--color-text)]">
+            <div className="zen-panel-soft flex-1 min-w-[130px] px-4 py-3">
+              <p className="text-xs uppercase tracking-wider truncate">Created by</p>
+              <p className="mt-1 text-sm font-semibold text-[var(--color-text)] truncate">
                 {task.createdBy?.name || "Unknown"}
               </p>
             </div>
